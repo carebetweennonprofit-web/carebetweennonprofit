@@ -69,9 +69,9 @@ const Team = () => (
           <p className="text-secondary font-heading font-700 text-sm uppercase tracking-widest mb-3">The Heart of Our Work</p>
           <h2 className="font-heading text-3xl md:text-4xl font-800 text-foreground">Core Members</h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
           {coreMembers.map((m) => (
-            <div key={m.role} className="bg-card rounded-2xl p-6 text-center border border-border shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
+            <div key={m.role} className="bg-card rounded-2xl p-6 text-center border border-border shadow-sm hover:shadow-md transition-all hover:-translate-y-1 w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]">
               <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-4 mx-auto overflow-hidden">
                 {"image" in m && m.image ? (
                   <img src={m.image} alt={m.name} className="w-full h-full object-cover" />
