@@ -80,7 +80,7 @@ const Index = () => (
     </section>
 
     {/* What Is Diagnostic Limbo */}
-    <section className="py-20 bg-sky-light">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-10">
           <p className="text-secondary font-heading font-700 text-sm uppercase tracking-widest mb-3">Understanding the Challenge</p>
@@ -104,7 +104,7 @@ const Index = () => (
     </section>
 
     {/* Pillars */}
-    <section className="py-20 bg-sky-light">
+    <section className="py-20 bg-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <p className="text-secondary font-heading font-700 text-sm uppercase tracking-widest mb-3">What We Do</p>
