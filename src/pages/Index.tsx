@@ -79,6 +79,30 @@ const Index = () => (
       </div>
     </section>
 
+    {/* What Is Diagnostic Limbo */}
+    <section className="py-20 bg-sky-light">
+      <div className="container mx-auto px-4 max-w-4xl">
+        <div className="text-center mb-10">
+          <p className="text-secondary font-heading font-700 text-sm uppercase tracking-widest mb-3">Understanding the Challenge</p>
+          <h2 className="font-heading text-3xl md:text-4xl font-800 text-foreground">What Is Diagnostic Limbo?</h2>
+        </div>
+        <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
+          <p>
+            Diagnostic limbo is the uncertain and often overwhelming period when a child or individual is experiencing medical symptoms, but doctors have not yet been able to reach a clear diagnosis. Families may go through countless appointments, tests, and referrals — sometimes over months or even years — without answers.
+          </p>
+          <p>
+            During this time, families face unique emotional, financial, and logistical challenges. Without a diagnosis, it can be difficult to access specialized treatments, connect with support communities, or even explain what's happening to friends and family.
+          </p>
+          <p>
+            Diagnostic limbo is more common than many people realize. Millions of individuals worldwide live with rare, undiagnosed, or complex medical conditions. For children and their caregivers, the uncertainty can feel isolating — but it doesn't have to be.
+          </p>
+          <p className="text-foreground font-heading font-700 text-center text-xl">
+            CareBetween exists to bridge that gap — offering care, connection, and hope while families wait for answers.
+          </p>
+        </div>
+      </div>
+    </section>
+
     {/* Pillars */}
     <section className="py-20 bg-sky-light">
       <div className="container mx-auto px-4">
