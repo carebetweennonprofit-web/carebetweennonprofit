@@ -20,8 +20,6 @@ const founders = [
 const coreMembers = [
   { name: "Logan Kheylik", role: "Communications Lead", icon: Sparkles },
   { name: "Spencer Liu", role: "Financial Officer", icon: Star, image: spencerImg },
-  { name: "Team Member", role: "Volunteer Manager", icon: Shield },
-  { name: "Team Member", role: "Program Coordinator", icon: Heart },
 ];
 
 const Team = () => (
