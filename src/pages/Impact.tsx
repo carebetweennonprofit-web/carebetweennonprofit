@@ -1,5 +1,5 @@
 import { Package, Users, Heart, Globe } from "lucide-react";
-import impactImage from "@/assets/impact-image.jpg";
+import heroImage from "@/assets/hero-image.jpg";
 
 const stats = [
   { icon: Package, value: "0", label: "Care Packages Delivered" },
@@ -28,7 +28,7 @@ const Impact = () => (
     {/* Hero */}
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
-        <img src={impactImage} alt="Volunteers packing care packages" className="w-full h-full object-cover" loading="lazy" width={1200} height={800} />
+        <img src={heroImage} alt="Volunteers packing care packages" className="w-full h-full object-cover" loading="lazy" width={1200} height={800} />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 to-foreground/50" />
       </div>
       <div className="relative container mx-auto px-4 py-28">
@@ -62,7 +62,7 @@ const Impact = () => (
     </section>
 
     {/* Stories */}
-    <section className="py-20 bg-sky-light">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <p className="text-secondary font-heading font-700 text-sm uppercase tracking-widest mb-3">Voices of Hope</p>
@@ -81,7 +81,7 @@ const Impact = () => (
     </section>
 
     {/* Programs */}
-    <section className="py-20 bg-card">
+    <section className="py-20 bg-sky-light">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-14">
           <p className="text-accent font-heading font-700 text-sm uppercase tracking-widest mb-3">How We Help</p>
