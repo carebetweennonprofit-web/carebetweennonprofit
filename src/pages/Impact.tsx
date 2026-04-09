@@ -2,10 +2,10 @@ import { Package, Users, Heart, Globe } from "lucide-react";
 import impactImage from "@/assets/impact-image.jpg";
 
 const stats = [
-  { icon: Package, value: "500+", label: "Care Packages Delivered" },
-  { icon: Users, value: "1,200+", label: "Families Supported" },
-  { icon: Heart, value: "300+", label: "Volunteers Engaged" },
-  { icon: Globe, value: "25+", label: "Communities Reached" },
+  { icon: Package, value: "0", label: "Care Packages Delivered" },
+  { icon: Users, value: "0", label: "Families Supported" },
+  { icon: Heart, value: "0", label: "Volunteers Engaged" },
+  { icon: Globe, value: "0", label: "Communities Reached" },
 ];
 
 const stories = [
