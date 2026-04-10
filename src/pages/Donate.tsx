@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Heart, Gift, BookOpen, Users, Check } from "lucide-react";
+import { Heart, Gift, BookOpen, Users } from "lucide-react";
 
 const amounts = [10, 25, 50, 100, 250];
 
@@ -106,27 +106,6 @@ const Donate = () => {
         </div>
       </section>
 
-      {/* Other ways */}
-      <section className="py-20 bg-card">
-        <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h2 className="font-heading text-3xl font-800 text-foreground mb-6">Other Ways to Help</h2>
-          <div className="grid sm:grid-cols-3 gap-6">
-            {[
-              { title: "Volunteer", desc: "Join our team of dedicated volunteers who pack care packages and support families." },
-              { title: "Spread the Word", desc: "Share our mission on social media and help raise awareness." },
-              { title: "Partner With Us", desc: "Organizations and businesses can partner with CareBetween for greater impact." },
-            ].map((w) => (
-              <div key={w.title} className="bg-background rounded-2xl p-6 border border-border">
-                <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-3">
-                  <Check className="w-5 h-5 text-secondary" />
-                </div>
-                <h3 className="font-heading text-lg font-700 text-foreground mb-2">{w.title}</h3>
-                <p className="text-muted-foreground text-sm">{w.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

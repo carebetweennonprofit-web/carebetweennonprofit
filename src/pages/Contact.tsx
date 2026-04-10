@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, AlertTriangle } from "lucide-react";
+import { Mail, MapPin, AlertTriangle } from "lucide-react";
 import { toast } from "sonner";
 
 const Contact = () => {
@@ -38,10 +38,6 @@ const Contact = () => {
                   <a href="mailto:carebetweennonprofit@gmail.com" className="hover:text-primary transition-colors">
                     carebetweennonprofit@gmail.com
                   </a>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-primary" />
-                  <span>(555) 123-4567</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-primary" />

@@ -157,8 +157,9 @@ const Index = () => (
               icon: <Share2 className="w-8 h-8 text-secondary" />,
               title: "Spread Awareness",
               desc: "Share our mission on social media. Awareness is the first step toward building a more understanding society.",
-              action: null,
-              to: null,
+              action: "Follow Us on Instagram",
+              to: "https://www.instagram.com/carebetween/",
+              external: true,
             },
             {
               icon: <Building2 className="w-8 h-8 text-accent" />,
@@ -173,12 +174,23 @@ const Index = () => (
               <h3 className="font-heading text-xl font-700 text-foreground mb-3">{item.title}</h3>
               <p className="text-muted-foreground leading-relaxed mb-6 flex-1">{item.desc}</p>
               {item.action && item.to && (
+                item.external ? (
+                  <a
+                    href={item.to}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block border border-border rounded-full py-3 font-heading font-600 text-sm text-foreground hover:bg-muted transition-colors"
+                  >
+                    {item.action}
+                  </a>
+                ) : (
                 <Link
                   to={item.to}
                   className="block border border-border rounded-full py-3 font-heading font-600 text-sm text-foreground hover:bg-muted transition-colors"
                 >
                   {item.action}
                 </Link>
+                )
               )}
             </div>
           ))}
