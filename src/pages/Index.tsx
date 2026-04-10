@@ -190,6 +190,7 @@ const Index = () => (
                 >
                   {item.action}
                 </Link>
+                )
               )}
             </div>
           ))}

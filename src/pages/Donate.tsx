@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Heart, Gift, BookOpen, Users, Check } from "lucide-react";
+import { Heart, Gift, BookOpen, Users } from "lucide-react";
 
 const amounts = [10, 25, 50, 100, 250];
 
