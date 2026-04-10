@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Heart, Users, BookOpen, Megaphone, ArrowRight } from "lucide-react";
+import { Heart, Users, BookOpen, Megaphone, ArrowRight, Gift, HeartHandshake, Share2, Building2 } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 
 const pillars = [
@@ -122,6 +122,64 @@ const Index = () => (
               </div>
               <h3 className="font-heading text-xl font-700 text-foreground mb-3">{p.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{p.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Get Involved */}
+    <section className="py-20 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-14">
+          <h2 className="font-heading text-3xl md:text-4xl font-800 text-foreground mb-4">Get Involved</h2>
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+            It takes a community to support a family in limbo. Join us in making the unknown a little less lonely.
+          </p>
+        </div>
+        <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {[
+            {
+              icon: <Gift className="w-8 h-8 text-primary" />,
+              title: "Donate",
+              desc: "Your financial contribution directly funds care packages, support group facilitation, and resource development.",
+              action: "Make a Donation",
+              to: "/donate",
+            },
+            {
+              icon: <HeartHandshake className="w-8 h-8 text-accent" />,
+              title: "Volunteer",
+              desc: "Join our network of volunteers to help pack care packages, organize local events, or provide peer support.",
+              action: "Become a Volunteer",
+              to: "/contact",
+            },
+            {
+              icon: <Share2 className="w-8 h-8 text-secondary" />,
+              title: "Spread Awareness",
+              desc: "Share our mission on social media. Awareness is the first step toward building a more understanding society.",
+              action: null,
+              to: null,
+            },
+            {
+              icon: <Building2 className="w-8 h-8 text-accent" />,
+              title: "Corporate Partners",
+              desc: "Partner your business with CareBetween to sponsor care packages, match donations, or host fundraising events.",
+              action: "Partner With Us",
+              to: "/contact",
+            },
+          ].map((item) => (
+            <div key={item.title} className="bg-card rounded-2xl p-8 border border-border text-center flex flex-col">
+              <div className="flex justify-center mb-4">{item.icon}</div>
+              <h3 className="font-heading text-xl font-700 text-foreground mb-3">{item.title}</h3>
+              <p className="text-muted-foreground leading-relaxed mb-6 flex-1">{item.desc}</p>
+              {item.action && item.to && (
+                <Link
+                  to={item.to}
+                  className="block border border-border rounded-full py-3 font-heading font-600 text-sm text-foreground hover:bg-muted transition-colors"
+                >
+                  {item.action}
+                </Link>
+              )}
             </div>
           ))}
         </div>

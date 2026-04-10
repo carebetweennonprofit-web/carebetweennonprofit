@@ -7,6 +7,8 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/team", label: "Our Team" },
   { to: "/impact", label: "Our Impact" },
+  { to: "/resources", label: "Resources" },
+  { to: "/contact", label: "Contact" },
   { to: "/donate", label: "Donate" },
 ];
 
