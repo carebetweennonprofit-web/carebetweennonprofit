@@ -9,7 +9,6 @@ const navLinks = [
   { to: "/impact", label: "Our Impact" },
   { to: "/resources", label: "Resources" },
   { to: "/contact", label: "Contact" },
-  { to: "/donate", label: "Donate" },
 ];
 
 const Navbar = () => {
@@ -77,6 +76,14 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+          <Link
+            to="/donate"
+            onClick={() => setOpen(false)}
+            className="mt-2 flex items-center justify-center gap-2 bg-accent text-accent-foreground px-5 py-3 rounded-full font-heading font-700 text-sm shadow-md"
+          >
+            <Heart className="w-4 h-4" />
+            Donate Now
+          </Link>
         </div>
       )}
     </nav>
