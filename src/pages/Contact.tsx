@@ -1,18 +1,45 @@
 import { useState } from "react";
 import { Mail, MapPin, AlertTriangle } from "lucide-react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
       toast.error("Please fill in all required fields.");
       return;
     }
-    toast.success("Thank you! Your message has been sent.");
-    setForm({ name: "", email: "", subject: "", message: "" });
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email.trim())) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          name: form.name.trim(),
+          email: form.email.trim(),
+          subject: form.subject.trim(),
+          message: form.message.trim(),
+        },
+      });
+      if (error || (data && data.success === false)) {
+        throw new Error(error?.message || data?.error || "Failed to send message");
+      }
+      toast.success("Thank you! Your message has been sent.");
+      setForm({ name: "", email: "", subject: "", message: "" });
+    } catch (err) {
+      console.error(err);
+      toast.error("Sorry, something went wrong sending your message. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -107,9 +134,10 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-primary text-primary-foreground py-3 rounded-lg font-heading font-700 hover:bg-primary/90 transition-colors"
+                  disabled={submitting}
+                  className="w-full bg-primary text-primary-foreground py-3 rounded-lg font-heading font-700 hover:bg-primary/90 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {submitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
             </div>
