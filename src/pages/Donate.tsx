@@ -28,7 +28,7 @@ const Donate = () => {
       {/* Donation form */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4 max-w-2xl">
-          <div style={{ position: "relative", overflow: "hidden", height: "900px", width: "100%" }}>
+          <div style={{ position: "relative", overflow: "hidden", height: "750px", width: "100%" }}>
             <iframe
               title="Donation form powered by Zeffy"
               style={{ position: "absolute", border: 0, top: 0, left: 0, bottom: 0, right: 0, width: "100%", height: "100%" }}
