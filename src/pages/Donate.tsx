@@ -28,10 +28,10 @@ const Donate = () => {
     {/* Donation form */}
       <section className="py-12 bg-card">
         <div className="container mx-auto px-4 max-w-2xl">
-          <div style={{ position: "relative", overflow: "hidden", height: "950px", width: "100%", borderRadius: "24px", boxShadow: "0 4px 24px rgba(0,0,0,0.08)" }}>
+          <div style={{ position: "relative", width: "100%", borderRadius: "24px", boxShadow: "0 4px 24px rgba(0,0,0,0.08)", overflow: "hidden" }}>
             <iframe
               title="Donation form powered by Zeffy"
-              style={{ position: "absolute", border: 0, top: 0, left: 0, bottom: 0, right: 0, width: "100%", height: "100%" }}
+              style={{ display: "block", border: 0, width: "100%", height: "750px" }}
               src="https://www.zeffy.com/embed/donation-form/donate-to-change-lives-12811"
               allowTransparency={true}
             />
