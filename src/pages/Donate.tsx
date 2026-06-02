@@ -1,7 +1,4 @@
-import { useState } from "react";
-import { Heart, Gift, BookOpen, Users } from "lucide-react";
-
-const amounts = [10, 25, 50, 100, 250];
+import { Gift, BookOpen, Users, Heart } from "lucide-react";
 
 const donationImpact = [
   { amount: "$10", impact: "Provides a comfort toy for a child in the hospital", icon: Gift },
@@ -11,11 +8,6 @@ const donationImpact = [
 ];
 
 const Donate = () => {
-  const [selected, setSelected] = useState<number | null>(25);
-  const [custom, setCustom] = useState("");
-
-  const activeAmount = custom ? Number(custom) : selected;
-
   return (
     <div>
       {/* Hero */}
@@ -36,52 +28,25 @@ const Donate = () => {
       {/* Donation form */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4 max-w-2xl">
-          <div className="bg-background rounded-3xl p-8 md:p-12 border border-border shadow-lg">
-            <h2 className="font-heading text-2xl font-800 text-foreground mb-2 text-center">Choose Your Donation</h2>
-            <p className="text-muted-foreground text-center mb-8">Every dollar counts toward bringing comfort and hope.</p>
-
-            <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 mb-6">
-              {amounts.map((amt) => (
-                <button
-                  key={amt}
-                  onClick={() => { setSelected(amt); setCustom(""); }}
-                  className={`py-3 rounded-xl font-heading font-700 text-lg transition-all ${
-                    selected === amt && !custom
-                      ? "bg-primary text-primary-foreground shadow-md scale-105"
-                      : "bg-muted text-foreground hover:bg-primary/15"
-                  }`}
-                >
-                  ${amt}
-                </button>
-              ))}
+          <div
+            data-zeffy-embed
+            data-form-url="/embed/donation-form/donate-to-change-lives-12811"
+          />
+          <div data-zeffy-embed-fallback style={{ display: "none" }}>
+            <div style={{ position: "relative", overflow: "hidden", height: "450px", width: "100%" }}>
+              <iframe
+                title="Donation form powered by Zeffy"
+                style={{ position: "absolute", border: 0, top: 0, left: 0, bottom: 0, right: 0, width: "100%", height: "100%" }}
+                src="https://www.zeffy.com/embed/donation-form/donate-to-change-lives-12811"
+                allowPaymentRequest
+                allowTransparency={true}
+              />
             </div>
-
-            <div className="mb-8">
-              <label className="block text-sm font-heading font-600 text-muted-foreground mb-2">Custom Amount</label>
-              <div className="relative">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground font-heading font-700">$</span>
-                <input
-                  type="number"
-                  placeholder="Enter amount"
-                  value={custom}
-                  onChange={(e) => { setCustom(e.target.value); setSelected(null); }}
-                  className="w-full pl-8 pr-4 py-3 rounded-xl border border-border bg-card text-foreground font-heading focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-                />
-              </div>
-            </div>
-
-            <button
-              className="w-full flex items-center justify-center gap-2 bg-accent text-accent-foreground py-4 rounded-full font-heading font-700 text-lg shadow-lg hover:shadow-xl transition-all hover:scale-[1.02] disabled:opacity-50"
-              disabled={!activeAmount || activeAmount <= 0}
-            >
-              <Heart className="w-5 h-5" />
-              Donate {activeAmount ? `$${activeAmount}` : ""}
-            </button>
-
-            <p className="text-muted-foreground text-sm text-center mt-4">
-              Secure donation processing. CareBetween is a registered 501(c)(3) nonprofit.
-            </p>
           </div>
+          <script
+            src="https://www.zeffy.com/embed/v2/zeffy-embed.js"
+            onError="document.querySelectorAll('[data-zeffy-embed-fallback]').forEach(function(el){el.style.display='block';})"
+          />
         </div>
       </section>
 
