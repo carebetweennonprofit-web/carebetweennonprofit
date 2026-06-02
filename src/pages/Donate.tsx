@@ -28,25 +28,14 @@ const Donate = () => {
       {/* Donation form */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4 max-w-2xl">
-          <div
-            data-zeffy-embed
-            data-form-url="/embed/donation-form/donate-to-change-lives-12811"
-          />
-          <div data-zeffy-embed-fallback style={{ display: "none" }}>
-            <div style={{ position: "relative", overflow: "hidden", height: "450px", width: "100%" }}>
-              <iframe
-                title="Donation form powered by Zeffy"
-                style={{ position: "absolute", border: 0, top: 0, left: 0, bottom: 0, right: 0, width: "100%", height: "100%" }}
-                src="https://www.zeffy.com/embed/donation-form/donate-to-change-lives-12811"
-                allowPaymentRequest
-                allowTransparency={true}
-              />
-            </div>
+          <div style={{ position: "relative", overflow: "hidden", height: "650px", width: "100%" }}>
+            <iframe
+              title="Donation form powered by Zeffy"
+              style={{ position: "absolute", border: 0, top: 0, left: 0, bottom: 0, right: 0, width: "100%", height: "100%" }}
+              src="https://www.zeffy.com/embed/donation-form/donate-to-change-lives-12811"
+              allowTransparency={true}
+            />
           </div>
-          <script
-            src="https://www.zeffy.com/embed/v2/zeffy-embed.js"
-            onError="document.querySelectorAll('[data-zeffy-embed-fallback]').forEach(function(el){el.style.display='block';})"
-          />
         </div>
       </section>
 
