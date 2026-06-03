@@ -11,15 +11,17 @@ const founders = [
   },
   {
     name: "Forrest Lin",
-    role: "Co-Founder & Director of Outreach",
+    role: "Co-Founder & Chief Operating Officer",
     bio: "Passionate about community building and advocacy, Forrest leads CareBetween's outreach efforts to connect families with vital resources.",
     icon: Sparkles,
   },
 ];
 
 const coreMembers = [
-  { name: "Logan Kheylik", role: "Communications Lead", icon: Sparkles },
-  { name: "Spencer Liu", role: "Financial Officer", icon: Star, image: spencerImg },
+  { name: "Logan Kheylik", role: "Secretary", icon: Sparkles },
+  { name: "Adrienne Paras", role: "Outreach Coordinator", icon: Heart },
+  { name: "Spencer Liu", role: "Board Member", icon: Star, image: spencerImg },
+  { name: "Corey Yiu", role: "Board Member", icon: Shield },
 ];
 
 const Team = () => (
@@ -71,7 +73,7 @@ const Team = () => (
         </div>
         <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
           {coreMembers.map((m) => (
-            <div key={m.role} className="bg-card rounded-2xl p-6 text-center border border-border shadow-sm hover:shadow-md transition-all hover:-translate-y-1 w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]">
+            <div key={m.name} className="bg-card rounded-2xl p-6 text-center border border-border shadow-sm hover:shadow-md transition-all hover:-translate-y-1 w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]">
               <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-4 mx-auto overflow-hidden">
                 {"image" in m && m.image ? (
                   <img src={m.image} alt={m.name} className="w-full h-full object-cover" />
@@ -94,7 +96,7 @@ const Team = () => (
         <p className="text-muted-foreground text-lg mb-6">
           We're always looking for passionate volunteers and advocates. Reach out to learn how you can help.
         </p>
-        <a
+        
           href="mailto:carebetweennonprofit@gmail.com"
           className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-3 rounded-full font-heading font-700 hover:opacity-90 transition-all"
         >
