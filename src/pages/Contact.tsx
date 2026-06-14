@@ -156,7 +156,13 @@ const Contact = () => {
             </p>
           </div>
           <div className="bg-card rounded-2xl border border-border shadow-sm overflow-hidden">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe2cGDGNMDlSHkFHMOHy0MrMPbxkBEGiH8HxkNveMvlCyRiRg/viewform?embedded=true" width="100%" height="900" frameBorder={0} marginHeight={0} marginWidth={0}>Loading…</iframe>
+            Got it — the form URL I used was wrong. Here's the fix, just change the iframe line in your `Contact.tsx` to:
+
+```tsx
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc9MnbiMLfnhVpnOEnRxBLgtfpFyz5TN78XvCEgKBMjOJql7g/viewform?embedded=true" width="100%" height="2162" frameBorder={0} marginHeight={0} marginWidth={0}>Loading…</iframe>
+```
+
+That's the only change — just the `src` URL and height bumped to `2162`. Commit and push!
           </div>
         </div>
       </section>
