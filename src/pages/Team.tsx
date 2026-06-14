@@ -76,13 +76,6 @@ const Team = () => (
         </div>
       </div>
     </section>
-    <section className="py-16 bg-card">
-      <div className="container mx-auto px-4 text-center max-w-2xl">
-        <h2 className="font-heading text-3xl font-800 text-foreground mb-4">Want to Join Our Team?</h2>
-        <p className="text-muted-foreground text-lg mb-6">We're always looking for passionate volunteers and advocates. Reach out to learn how you can help.</p>
-        <a href="mailto:carebetweennonprofit@gmail.com" className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-3 rounded-full font-heading font-700 hover:opacity-90 transition-all">Get in Touch</a>
-      </div>
-    </section>
     <section className="py-16 bg-sky-light">
       <div className="container mx-auto px-4 max-w-3xl">
         <div className="text-center mb-10">
