@@ -26,10 +26,7 @@ const coreMembers = [
 
 const Team = () => (
   <div>
-    <section
-      className="py-20 bg-cover bg-center relative"
-      style={{ backgroundImage: `url(${teamBg})` }}
-    >
+    <section className="py-20 bg-cover bg-center relative" style={{ backgroundImage: `url(${teamBg})` }}>
       <div className="container mx-auto px-4 text-center max-w-3xl relative z-10">
         <p className="text-secondary font-heading font-700 text-sm uppercase tracking-widest mb-3">The People Behind CareBetween</p>
         <h1 className="font-heading text-4xl md:text-5xl font-800 text-foreground mb-6">
@@ -90,6 +87,16 @@ const Team = () => (
           We're always looking for passionate volunteers and advocates. Reach out to learn how you can help.
         </p>
         <a href="mailto:carebetweennonprofit@gmail.com" className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-3 rounded-full font-heading font-700 hover:opacity-90 transition-all">Get in Touch</a>
+      </div>
+    </section>
+    <section className="py-16 bg-sky-light">
+      <div className="container mx-auto px-4 max-w-3xl">
+        <div className="text-center mb-10">
+          <p className="text-secondary font-heading font-700 text-sm uppercase tracking-widest mb-3">Get Involved</p>
+          <h2 className="font-heading text-3xl md:text-4xl font-800 text-foreground mb-4">Volunteer Application</h2>
+          <p className="text-muted-foreground text-lg">Interested in joining our mission? Fill out the form below to apply as a volunteer.</p>
+        </div>
+        <div className="bg-card rounded-2xl border border-border shadow-sm overflow-hidden"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc9MnbiMLfnhVpnOEnRxBLgtfpFyz5TN78XvCEgKBMjOJql7g/viewform?embedded=true" width="100%" height="2162" frameBorder={0} marginHeight={0} marginWidth={0} style={{ display: "block" }}>Loading…</iframe></div>
       </div>
     </section>
   </div>
