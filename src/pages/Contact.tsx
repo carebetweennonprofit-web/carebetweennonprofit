@@ -144,24 +144,4 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      {/* Volunteer Application */}
-      <section className="py-16 bg-sky-light">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <div className="text-center mb-10">
-            <p className="text-secondary font-heading font-700 text-sm uppercase tracking-widest mb-3">Get Involved</p>
-            <h2 className="font-heading text-3xl md:text-4xl font-800 text-foreground mb-4">Volunteer Application</h2>
-            <p className="text-muted-foreground text-lg">
-              Interested in joining our mission? Fill out the form below to apply as a volunteer. We'd love to have you on board.
-            </p>
-          </div>
-          <div className="bg-card rounded-2xl border border-border shadow-sm overflow-hidden">
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc9MnbiMLfnhVpnOEnRxBLgtfpFyz5TN78XvCEgKBMjOJql7g/viewform?embedded=true" width="100%" height="2162" frameBorder={0} marginHeight={0} marginWidth={0}>Loading…</iframe>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
 export default Contact;
