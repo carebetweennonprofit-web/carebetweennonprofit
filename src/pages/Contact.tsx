@@ -1,6 +1,3 @@
-Here's the full updated file with the volunteer form added as a new section below the existing contact form:
-
-```tsx
 import { useState } from "react";
 import { Mail, MapPin, AlertTriangle } from "lucide-react";
 import { toast } from "sonner";
@@ -168,6 +165,3 @@ const Contact = () => {
 };
 
 export default Contact;
-```
-
-The volunteer section is added at the bottom with the Google Form embedded. I used the full embed URL from your shortened link. Commit and push!
