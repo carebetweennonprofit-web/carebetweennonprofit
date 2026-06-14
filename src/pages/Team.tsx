@@ -29,12 +29,8 @@ const Team = () => (
     <section className="py-20 bg-cover bg-center relative" style={{ backgroundImage: `url(${teamBg})` }}>
       <div className="container mx-auto px-4 text-center max-w-3xl relative z-10">
         <p className="text-secondary font-heading font-700 text-sm uppercase tracking-widest mb-3">The People Behind CareBetween</p>
-        <h1 className="font-heading text-4xl md:text-5xl font-800 text-foreground mb-6">
-          Meet Our <span className="text-primary">Team</span>
-        </h1>
-        <p className="text-muted-foreground text-lg leading-relaxed">
-          A group of compassionate individuals dedicated to supporting families through diagnostic limbo with empathy, resources, and tireless advocacy.
-        </p>
+        <h1 className="font-heading text-4xl md:text-5xl font-800 text-foreground mb-6">Meet Our <span className="text-primary">Team</span></h1>
+        <p className="text-muted-foreground text-lg leading-relaxed">A group of compassionate individuals dedicated to supporting families through diagnostic limbo with empathy, resources, and tireless advocacy.</p>
       </div>
     </section>
     <section className="py-20 bg-card">
@@ -83,9 +79,7 @@ const Team = () => (
     <section className="py-16 bg-card">
       <div className="container mx-auto px-4 text-center max-w-2xl">
         <h2 className="font-heading text-3xl font-800 text-foreground mb-4">Want to Join Our Team?</h2>
-        <p className="text-muted-foreground text-lg mb-6">
-          We're always looking for passionate volunteers and advocates. Reach out to learn how you can help.
-        </p>
+        <p className="text-muted-foreground text-lg mb-6">We're always looking for passionate volunteers and advocates. Reach out to learn how you can help.</p>
         <a href="mailto:carebetweennonprofit@gmail.com" className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-8 py-3 rounded-full font-heading font-700 hover:opacity-90 transition-all">Get in Touch</a>
       </div>
     </section>
