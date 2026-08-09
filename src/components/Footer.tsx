@@ -36,9 +36,7 @@ const Footer = () => (
           <div className="flex flex-col gap-3 text-background/70">
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-primary" />
-              <a href="mailto:carebetweennonprofit@gmail.com" className="hover:text-primary transition-colors">
-                carebetweennonprofit@gmail.com
-              </a>
+              <a href="mailto:info@carebetween.org" className="hover:text-primary transition-colors">info@carebetween.org</a>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4 text-primary" />
