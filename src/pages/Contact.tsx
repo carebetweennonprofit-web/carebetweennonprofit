@@ -58,7 +58,7 @@ const Contact = () => {
               <div className="space-y-4 text-muted-foreground">
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-primary" />
-                  <a href="mailto:carebetweennonprofit@gmail.com" className="hover:text-primary transition-colors">carebetweennonprofit@gmail.com</a>
+                  <a href="mailto:info@carebetween.org" className="hover:text-primary transition-colors">info@carebetween.org</a>
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-primary" />
