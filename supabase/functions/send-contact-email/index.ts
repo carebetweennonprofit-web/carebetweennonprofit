@@ -64,7 +64,7 @@ Deno.serve(async (req) => {
       },
       body: JSON.stringify({
         from: 'CareBetween Contact <onboarding@resend.dev>',
-        to: ['carebetweennonprofit@gmail.com'],
+        to: ['info@carebetween.org'],
         reply_to: email,
         subject: subject ? `[CareBetween Contact] ${subject}` : `[CareBetween Contact] Message from ${name}`,
         html,
