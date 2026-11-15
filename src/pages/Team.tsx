@@ -1,4 +1,4 @@
-import { Heart, Sparkles, Shield, Star } from "lucide-react";
+import { Heart, Sparkles, Shield, Star, Mail } from "lucide-react";
 import teamBg from "@/assets/team-bg.jpg";
 import spencerImg from "@/assets/spencer.png";
 
@@ -6,12 +6,14 @@ const founders = [
   {
     name: "Yisin Lim",
     role: "Co-Founder & Executive Director",
+    email: "yisin@carebetween.org",
     bio: "Inspired by personal experience with diagnostic limbo, Yisin founded CareBetween to ensure no family feels alone during uncertain medical journeys.",
     icon: Heart,
   },
   {
     name: "Forrest Lin",
     role: "Co-Founder & Chief Operating Officer",
+    email: "forrest@carebetween.org",
     bio: "Passionate about community building and advocacy, Forrest leads CareBetween's outreach efforts to connect families with vital resources.",
     icon: Sparkles,
   },
@@ -19,7 +21,7 @@ const founders = [
 
 const coreMembers = [
   { name: "Logan Kheylik", role: "Secretary", icon: Sparkles },
-  { name: "Adrienne Paras", role: "Outreach Coordinator", icon: Heart },
+  { name: "Adrienne Paras", role: "Outreach Coordinator", email: "adrienne@carebetween.org", icon: Heart },
   { name: "Spencer Liu", role: "Board Member", icon: Star, image: spencerImg },
   { name: "Corey Yiu", role: "Board Member", icon: Shield },
 ];
@@ -46,7 +48,11 @@ const Team = () => (
                 <f.icon className="w-10 h-10 text-primary" />
               </div>
               <h3 className="font-heading text-2xl font-700 text-foreground text-center mb-1">{f.name}</h3>
-              <p className="text-secondary font-heading font-600 text-center mb-4">{f.role}</p>
+              <p className="text-secondary font-heading font-600 text-center mb-2">{f.role}</p>
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <Mail className="w-4 h-4 text-primary" />
+                <a href={`mailto:${f.email}`} className="text-muted-foreground hover:text-primary transition-colors text-sm">{f.email}</a>
+              </div>
               <p className="text-muted-foreground leading-relaxed text-center">{f.bio}</p>
             </div>
           ))}
@@ -71,6 +77,12 @@ const Team = () => (
               </div>
               <h3 className="font-heading text-lg font-700 text-foreground mb-1">{m.name}</h3>
               <p className="text-muted-foreground text-sm">{m.role}</p>
+              {"email" in m && m.email ? (
+                <div className="flex items-center justify-center gap-2 mt-2">
+                  <Mail className="w-4 h-4 text-primary" />
+                  <a href={`mailto:${m.email}`} className="text-muted-foreground hover:text-primary transition-colors text-sm">{m.email}</a>
+                </div>
+              ) : null}
             </div>
           ))}
         </div>
