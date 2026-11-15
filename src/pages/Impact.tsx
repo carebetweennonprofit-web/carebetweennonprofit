@@ -1,11 +1,11 @@
-import { Package, Users, Heart, Globe } from "lucide-react";
+import { Package, Users, Clock, DollarSign } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 
 const stats = [
-  { icon: Package, value: "0", label: "Care Packages Delivered" },
-  { icon: Users, value: "0", label: "Families Supported" },
-  { icon: Heart, value: "0", label: "Volunteers Engaged" },
-  { icon: Globe, value: "0", label: "Communities Reached" },
+  { icon: Package, value: "50+", label: "Care Packages Delivered" },
+  { icon: Users, value: "25+", label: "Families Supported" },
+  { icon: Clock, value: "1,000+", label: "Volunteer Hours" },
+  { icon: DollarSign, value: "$2,000+", label: "Funds Raised" },
 ];
 
 const stories = [
